@@ -7,3 +7,6 @@ for(var i=0; i<numbers.length; i++){
     document.write(numbers[i]);
     document.write(" ");
 }
+
+document.write("Highest mark is : ");
+document.write(numbers[0]);
