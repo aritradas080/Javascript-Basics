@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //normal syntax for functions
+        function display1(){
+            console.log("Display 1 function");
+        }
+
+        //arrow syntax of the functions
+        const display2 = () =>{
+            console.log("Display 2 function");
+        }
+        
+        const display3 = () => console.log("Display 3 function");//one statement, no curly needed
+
+        //------------------------------>>>return strategies<<<---------------------------------
+
+        //traditional functions
+        function message1(){return "hi return 1";}
+
+        //arrow function return strategies
+        const message2 = () => {return "hi return 2";}//return keyword needs to provide because of curly brackets
+        //or,
+        const message3 = () => "hi return 3"; //no return keyword needed if there is no curly brackets
+
+        display1();
+        display2();
+        display3();
+
+        console.log(message1());
+        console.log(message2());
+        console.log(message3());
+
+        //------------------------------>>>parameter passing<<<---------------------------------
+        //parameter passing for traditional functions
+        function addition1(num1,num2){
+            return num1+num2;
+        }
+
+        //parameter passing for arrow functions
+        const addition2 = (num1,num2) => {return num1+num2;}//with curly and return keyword
+
+        const addition3 = (num1,num2) => num1+num2;//without curly and return keyword
+
+        console.log(addition1(10,20));
+        console.log(addition2(10,20));
+        console.log(addition3(10,20));
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //filter and map utilizing traditional functions
+        var students = [
+            {
+                id: 101,
+                name: "asif",
+                cgpa: 2.65
+            },
+            {
+                id: 102,
+                name: "kalam",
+                cgpa: 3.99
+            },
+            {
+                id: 103,
+                name: "jaman",
+                cgpa: 3.50
+            },
+            {
+                id: 104,
+                name: "rahim",
+                cgpa: 2.00
+            }
+        ]
+
+        function studentNames(){
+            return students.filter(function(x){
+                if(x.cgpa>3.00){
+                    return x;
+             }
+            }).map(function(y){
+                return y.name;
+            })
+        }
+
+        //arrow syntax
+        const studentNames2 = () => students.filter((x) => x.cgpa > 3.00 ).map((y) => y.name) ;
+
+        console.log(studentNames());
+        console.log(studentNames2());
+    </script>
+</body>
+</html>

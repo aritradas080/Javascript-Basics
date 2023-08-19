@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //find(callback, value)--> returns the value of the first element that has passed certain condition
+        let numbers = [5,55,14,5,78];
+        let firstNumber = numbers.find(x=> x%2===0);
+        console.log(firstNumber);
+
+        //findIndex(callback, value)--> returns the index of the first element that has passed certain condition
+        let firstNumberIndex = numbers.findIndex(x=> x%2===0);
+        console.log(firstNumberIndex);
+
+        //for objects
+        var students = [
+            {
+                id : 101,
+                age : 23
+            },
+            {
+                id : 102,
+                age : 22
+            },
+            {
+                id : 103,
+                age : 35
+            },
+            {
+                id : 104,
+                age : 29
+            },
+        ]
+
+        let firstStudentwithEvenAge = students.find(x => x.age %2 ===0);
+        console.log(firstStudentwithEvenAge);
+    </script>
+</body>
+</html>

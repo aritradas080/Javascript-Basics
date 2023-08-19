@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //array destructuring
+        let numbers = [10,20,30,40,50];
+        let [n1,n2,n3,n4,n5] = numbers;
+        //n1=10,n2=20,n3=30,n4=40,n5=50
+
+        //swap variables
+        let a=10,b=20;
+        console.log(`a : ${a} and b: ${b}`);
+        [a,b] = [b,a];
+        console.log(`a : ${a} and b: ${b}`);
+
+        //object destructuring
+        var studentinfo = {
+                id:101,
+                name:"abc",
+                cgpa:2.33,
+                languages : {
+                    native : "bangla",
+                    beginner : "english"
+                }
+            }
+
+            const {id,name,languages} = studentinfo; //destructuring done
+
+            console.log(id);// no need to write "student."
+            console.log(name);// no need to write "student."
+            console.log(studentinfo.cgpa);
+            console.log(languages);
+            console.log(languages.native);
+
+            var newbie = {
+                id:1001,
+                language:"bangla"
+            }
+
+            //without destructuring
+            const info = (newbie) => {
+                console.log(`${newbie.id}, ${newbie.language}`);
+            }
+
+            //with destructuring
+            const newinfo = ({id,language}) => {
+                console.log(`${id}, ${language}`);
+            }
+
+
+            info(newbie);
+            newinfo(newbie);
+    </script>
+</body>
+</html>
